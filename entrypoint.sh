@@ -44,9 +44,6 @@ if [ ! -d "$CATALINA_HOME/webapps/jasperserver" ]; then
       echo "Importing $f..."
       ./js-import.sh --input-zip $f
     done
-
+    mkdir -p $CATALINA_HOME/webapps/jasperserver
     popd
 fi
-
-# run Tomcat to start JasperServer webapp
-catalina.sh run
